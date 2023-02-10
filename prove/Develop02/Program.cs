@@ -47,7 +47,17 @@ class Program
                 string option = entry1.RandomQuestions();
                 Console.Write(option);
                 userAnswer = Console.ReadLine();
+                Journal journal = new Journal();
+                journal._entries.Add(option);
+                journal._entries.Add(userAnswer);
             }
+
+            else if (userAnswer == "2")
+            {
+                Journal journal = new Journal();
+                journal.Display();
+            } 
+
         
         }  
        

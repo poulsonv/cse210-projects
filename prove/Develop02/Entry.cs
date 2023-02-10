@@ -4,6 +4,7 @@ class Entry
 
 
 {
+   // public List<string> _entries = new List<string> ();
     public List<string> questions = new List<string> ()
     {
         "Who was the most interesting person I interacted with today? ",
@@ -27,6 +28,7 @@ class Entry
         return questions[question]; 
     }
 
+   
 
 
 }
