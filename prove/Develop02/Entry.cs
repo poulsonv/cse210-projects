@@ -1,10 +1,15 @@
-using System; 
+using System.IO;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-class Entry
-
-
+public class Entry
 {
-   // public List<string> _entries = new List<string> ();
+    public string _userAnswer;
+
+    public string _question;
     public List<string> questions = new List<string> ()
     {
         "Who was the most interesting person I interacted with today? ",
@@ -13,22 +18,21 @@ class Entry
         "What was the strongest emotion I felt today? ",
         "If I had one thing I could do over today, what would it be? ",
     };
-    public void QuestionOption()  
-    {
-        foreach (string question in questions)
-        {
-            Console.WriteLine(question);
-        }
-    }
+    
 
-    public string RandomQuestions() 
+    public string RandomQuestions() // precisa ser feito fora do método anterior
+
     {
         Random random = new Random();
-        int question = random.Next(questions.Count);
-        return questions[question]; 
+        int _question = random.Next(questions.Count);
+        return questions[_question]; 
     }
 
-   
-
+    public void Display()
+    {
+        Console.WriteLine($"Prompt: {_question}");
+        Console.WriteLine($"Your answer: {_userAnswer}");
+        
+    }
 
 }

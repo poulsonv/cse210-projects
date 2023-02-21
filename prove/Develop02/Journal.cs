@@ -1,19 +1,23 @@
+using System.IO;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-class Journal
+public class Journal
 {
-    public List<string> _entries = new List<string> ();
-
-     public void Display(){
-        foreach (string userInput in _entries)
+   public List<Entry> _answers = new List<Entry> ();
+    public void AnswersList()
+    {
+        
+        foreach (Entry entry in _answers)
         {
-            Console.WriteLine($"Prompt: {userInput}");
+            
+            entry.Display();
         }
+           
+
     }
-
-
-
-
-
 }
+    
